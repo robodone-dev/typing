@@ -202,11 +202,17 @@ function judgeTyping(chara) {
     } else {
         // 間違いの場合
         // 何もしない
+        wrong_audio();
     }
     
     // スコアを更新
     scoreText = document.getElementById('score');
     scoreText.innerHTML = "スコア：" + score;
+}
+            
+function wrong_audio() {
+    document.getElementById('btn_wrong').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_wrong').play(); //クリックしたら音を再生
 }
 
 // JavaScript end
@@ -225,6 +231,10 @@ function judgeTyping(chara) {
         <!-- キーボード表示 -->
         <div id="board">
         </div>
+        
+        <audio id="btn_wrong">
+            <source src="./audio/Quiz-Wrong_Buzzer02-1.mp3" type="audio/mp3">
+        </audio>
     </body>
     <foot>
         
