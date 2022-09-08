@@ -129,7 +129,6 @@ function startReady() {
 
 function start_bgm(){
 
-    Countdown03_audio();
     //bgm流す
     bgm1_audio();
 }
@@ -245,6 +244,7 @@ function next_audio() {
 function Countdown03_audio() {
     document.getElementById('countdown03').currentTime = 0; //連続クリックに対応
     document.getElementById('countdown03').play(); //クリックしたら音を再生
+    document.getElementById('bgm1').play(); 
 }
 
 // JavaScript end
