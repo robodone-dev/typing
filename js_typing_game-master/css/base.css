@@ -199,7 +199,8 @@ body {
   width: 35%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
   animation-name: modalopen;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
+  border-radius:15px;
 }
 
 @keyframes modalopen {
@@ -216,6 +217,7 @@ body {
   padding: 3px 15px;
   display: flex;
   justify-content: space-between;
+  border-radius:15px 15px 0px 0px;
 }
 
 /*
