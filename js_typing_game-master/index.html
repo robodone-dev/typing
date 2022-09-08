@@ -209,10 +209,18 @@ function judgeTyping(chara) {
     scoreText = document.getElementById('score');
     scoreText.innerHTML = "スコア：" + score;
 }
-            
+ 
+function push_audio() {
+    document.getElementById('btn_push').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_push').play(); //クリックしたら音を再生
+}           
 function wrong_audio() {
     document.getElementById('btn_wrong').currentTime = 0; //連続クリックに対応
     document.getElementById('btn_wrong').play(); //クリックしたら音を再生
+}
+function next_audio() {
+    document.getElementById('next_word').currentTime = 0; //連続クリックに対応
+    document.getElementById('next_word').play(); //クリックしたら音を再生
 }
 
 // JavaScript end
@@ -235,6 +243,13 @@ function wrong_audio() {
         <audio id="btn_wrong">
             <source src="./audio/Quiz-Wrong_Buzzer02-1.mp3" type="audio/mp3">
         </audio>
+        <audio id="btn_push">
+            <source src="./audio/btn_push.mp3" type="audio/mp3">
+        </audio>
+        <audio id="next_word">
+            <source src="./audio/clear.mp3" type="audio/mp3">
+        </audio>
+
     </body>
     <foot>
         
