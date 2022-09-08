@@ -232,9 +232,9 @@ function modalOpen() {
 }
 
 
-const buttonRetry = document.getElementById('modalRetry');
+// const buttonRetry = document.getElementById('modalRetry');
 
-buttonRetry.addEventListener('click', startReady);
+// buttonRetry.addEventListener('click', startReady);
 function reset() {
     location.reload();
 }
@@ -286,7 +286,7 @@ function end_audio() {
           <div class="modal-body">
             <p id="score-1">ここにスコア</p>
             <p id="score-2">ここにコメント</p>
-            <button id="modalRetry" class="button">リトライ</button>
+            <button id="modalRetry" class="button" onclick="reset()">リトライ</button>
           </div>
         </div>
       </div>
