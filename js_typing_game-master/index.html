@@ -2,8 +2,8 @@
 <html>
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
         <meta http-equiv="content-type" charset="utf-8">
         <link rel="stylesheet" href="css/base.css" />
         <script src="//code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -130,6 +130,8 @@ function startReady() {
 function loadSubject() {
     
     // statementList = ["Test", "Apple", "Banana"];
+  
+    
     
     // 問題リストからランダムに問題を取り出す
     statement = statementList[Math.floor(Math.random() * statementList.length)];
@@ -157,6 +159,7 @@ function startTimer() {
     timerText = document.getElementById('timer');
     timerText.innerHTML = "残り時間：" + timer;
     
+    bgm1_audio();
 
     // 1秒おきにカウントダウン
     var id = setInterval(function(){
@@ -215,7 +218,10 @@ function judgeTyping(chara) {
     scoreText = document.getElementById('score');
     scoreText.innerHTML = "スコア：" + score;
 }
- 
+
+function bgm1_audio() {
+    document.getElementById('bgm1').play(); //クリックしたら音を再生
+}
 function push_audio() {
     document.getElementById('btn_push').currentTime = 0; //連続クリックに対応
     document.getElementById('btn_push').play(); //クリックしたら音を再生
@@ -254,6 +260,9 @@ function Countdown03_audio() {
         <div id="board">
         </div>
         
+        <audio id="bgm">
+            <source src="./audio/bgm1.mp3" type="audio/mp3">
+        </audio>
         <audio id="btn_wrong">
             <source src="./audio/Quiz-Wrong_Buzzer02-1.mp3" type="audio/mp3">
         </audio>
