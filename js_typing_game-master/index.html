@@ -181,6 +181,7 @@ function judgeTyping(chara) {
     if(chara == seikai) {
         // 正解の場合
         score = score + 10;
+        push_audio();
 
         // 正解文字を追加（input IDタグに追記）
         var input = document.getElementById('input');
@@ -195,6 +196,7 @@ function judgeTyping(chara) {
             
         } else {
             score = score + 50;
+            next_audio();
             // 次の問題へ
             loadSubject();
         }
