@@ -179,6 +179,7 @@ function startTimer() {
                 // alert("終了！！");
                 gameState = END;
                 clearInterval(id);
+                modalOpen();
             }
         }
     }, 1000);
@@ -220,6 +221,18 @@ function judgeTyping(chara) {
     // スコアを更新
     scoreText = document.getElementById('score');
     scoreText.innerHTML = "スコア：" + score;
+}
+
+// モーダルを起動
+function modalOpen() {
+　  const modal = document.getElementById('easyModal');
+    modal.style.display = 'block';
+}
+
+const buttonRetry = document.getElementById('modalRetry');
+buttonRetry.addEventListener('click', reset);
+function reset() {
+    location.reload();
 }
 
 function bgm1_audio() {
@@ -269,7 +282,7 @@ function end_audio() {
           <div class="modal-body">
             <p id="score-1"></p>
             <p id="score-2"></p>
-            <button id="modalOpen" class="button">リトライ</button>
+            <button id="modalRetry" class="button">リトライ</button>
           </div>
         </div>
       </div>
