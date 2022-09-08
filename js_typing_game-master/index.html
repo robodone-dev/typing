@@ -128,11 +128,6 @@ function startReady() {
     }, 1000);
 }
 
-function start_bgm(){
-
-    //bgm流す
-    bgm1_audio();
-}
 
 // 問題文を読み込み
 function loadSubject() {
@@ -176,6 +171,8 @@ function startTimer() {
 
         if(timer <= 0){
             if(gameState == PLAYING) {
+
+                end_audio();
                 // 終了処理
                 subject = document.getElementById('subject');
                 subject.innerHTML = "---- 終了 ----";
@@ -246,6 +243,9 @@ function Countdown03_audio() {
     document.getElementById('countdown03').currentTime = 0; //連続クリックに対応
     document.getElementById('countdown03').play(); //クリックしたら音を再生
 }
+function end_audio() {
+    document.getElementById('end').play(); //クリックしたら音を再生
+}
 
 // JavaScript end
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
@@ -282,6 +282,9 @@ function Countdown03_audio() {
         </audio>
        <audio id="countdown03">
             <source src="./audio/Countdown06-2.mp3" type="audio/mp3">
+        </audio>
+       <audio id="end">
+            <source src="./audio/end.wav" type="audio/wav">
         </audio>
 
     </body>
