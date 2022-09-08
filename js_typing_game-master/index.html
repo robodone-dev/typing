@@ -41,9 +41,7 @@ var statementList;  // 問題リスト
 var statement;      // 問題文
 var numOfStatement; // 問題文の何文字目かを表す番号
 
-const buttonRetry = document.getElementById('modalRetry');
 
-buttonRetry.addEventListener('click', reset);
 
 window.addEventListener("keydown", handleKeydown);
 window.addEventListener("keyup", handleKeyup);
@@ -234,6 +232,9 @@ function modalOpen() {
 }
 
 
+const buttonRetry = document.getElementById('modalRetry');
+
+buttonRetry.addEventListener('click', reset);
 function reset() {
     location.reload();
 }
