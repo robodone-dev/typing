@@ -103,6 +103,7 @@ function startReady() {
     // subject IDタグにカウントダウンを表示
     subject = document.getElementById('subject');
     subject.innerHTML = countdown;
+    Countdown03_audio();
 
     // 1秒おきにカウントダウン
     var id = setInterval(function(){
@@ -224,6 +225,10 @@ function next_audio() {
     document.getElementById('next_word').currentTime = 0; //連続クリックに対応
     document.getElementById('next_word').play(); //クリックしたら音を再生
 }
+function Countdown03_audio() {
+    document.getElementById('countdown03').currentTime = 0; //連続クリックに対応
+    document.getElementById('countdown03').play(); //クリックしたら音を再生
+}
 
 // JavaScript end
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
@@ -250,6 +255,9 @@ function next_audio() {
         </audio>
         <audio id="next_word">
             <source src="./audio/clear.mp3" type="audio/mp3">
+        </audio>
+       <audio id="countdown03">
+            <source src="./audio/Countdown06-2.mp3" type="audio/mp3">
         </audio>
 
     </body>
