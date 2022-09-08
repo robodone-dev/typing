@@ -106,7 +106,8 @@ function startReady() {
     // subject IDタグにカウントダウンを表示
     subject = document.getElementById('subject');
     subject.innerHTML = countdown;
-    Countdown03_audio();
+
+    
 
     // 1秒おきにカウントダウン
     var id = setInterval(function(){
@@ -126,13 +127,18 @@ function startReady() {
     }, 1000);
 }
 
+function start_bgm(){
+
+    Countdown03_audio();
+    //bgm流す
+    bgm1_audio();
+}
+
 // 問題文を読み込み
 function loadSubject() {
     
     // statementList = ["Test", "Apple", "Banana"];
   
-    //bgm流す
-    bgm1_audio();
     
     // 問題リストからランダムに問題を取り出す
     statement = statementList[Math.floor(Math.random() * statementList.length)];
