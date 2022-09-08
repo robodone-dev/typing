@@ -131,7 +131,8 @@ function loadSubject() {
     
     // statementList = ["Test", "Apple", "Banana"];
   
-    
+    //bgm流す
+    bgm1_audio();
     
     // 問題リストからランダムに問題を取り出す
     statement = statementList[Math.floor(Math.random() * statementList.length)];
@@ -259,7 +260,7 @@ function Countdown03_audio() {
         <div id="board">
         </div>
         
-        <audio id="bgm">
+        <audio id="bgm1">
             <source src="./audio/bgm1.mp3" type="audio/mp3">
         </audio>
         <audio id="btn_wrong">
