@@ -233,7 +233,13 @@ function judgeTyping(chara) {
 // モーダルを起動
 function modalOpen() {
 　  const modal = document.getElementById('easyModal');
-    modal.style.display = 'block';
+   modal.style.display = 'block';
+  
+    scoreText1 = document.getElementById('score-1');
+    scoreText1.innerHTML = "スコア：" + score;
+  
+    scoreText2 = document.getElementById('score-2');
+    scoreText2.innerHTML = "誤タイプ数：" + wongScore;
 }
 
 
