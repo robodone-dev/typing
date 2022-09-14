@@ -59,6 +59,12 @@ html, body {
     margin-left: 10px;
 }
 
+#wrongScore {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 
 #capslock {
     display:block;
