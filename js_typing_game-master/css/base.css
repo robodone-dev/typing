@@ -110,18 +110,14 @@ html, body {
     border-collapse: separate;
 /*     border-collapse: collapse; */
     width:100%; 
-    border-spacing:5.5px;
-    
+    border-spacing:3.5px;
 }
 #keyboard .tr {
 }
 #keyboard .key {
     position:relative; 
     height:45px;
-    color: #808080;
-    box-shadow: 2px 2.5px 0px 0px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #EEEEEE;
+
 }
 #keyboard .col1 {
     width:3.33%;
@@ -157,7 +153,11 @@ html, body {
     line-height:43px; 
     text-align:center; 
     vertical-align:middle; 
-    
+    color: #808080;
+    background-color: #EEEEEE;
+    box-shadow: 2px 2.5px 0px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+/*     background-color: #FEDCBD; */
     font-family:'Arial'; 
     font-weight: bold;
     -moz-border-radius:5px; 

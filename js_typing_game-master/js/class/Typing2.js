@@ -310,7 +310,7 @@ class Typing {
                 j++;
             }
         }
-        foundElements[targetNo].style.background="#00ffff";
+        foundElements[targetNo].style.background="#FEDCBD";
     }
 
     // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
