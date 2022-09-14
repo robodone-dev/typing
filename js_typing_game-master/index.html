@@ -8,9 +8,9 @@
         <meta http-equiv="content-type" charset="utf-8">
         <link rel="stylesheet" href="css/base.css" />
         <script src="//code.createjs.com/1.0.0/createjs.min.js"></script>
-        <script src="js/Common.js"></script>
-        <script src="js/class/Typing.js"></script>
-        <script src="js/class/FlashingText.js"></script>
+        <script src="https://robodone-dev.github.io/typing/js_typing_game-master/js/Common.js"></script>
+        <script src="https://robodone-dev.github.io/typing/js_typing_game-master/js/class/Typing2.js"></script>
+        <script src="https://robodone-dev.github.io/typing/js_typing_game-master/js/class/FlashingText.js"></script>
         <script>
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
 // JavaScript start
@@ -21,6 +21,7 @@ const PLAYING = 1;  // タイピングゲーム中
 const END = 2;      // ゲーム終了
 
 var score = 0;      // スコア
+var wongScore = 0;  // 誤りスコア
 var timer = 15;     // タイマー（秒）
 
 var countdown = 3;              // 準備中のカウントダウン
@@ -218,6 +219,10 @@ function judgeTyping(chara) {
         // 間違いの場合
         // 何もしない
         wrong_audio();
+      
+      　　　　wongScore = wongScore +1;
+        wrongScore = document.getElementById('wrongScore');
+        wrongScore.innerHTML = "誤タイプ数：" + wongScore;
     }
     
     // スコアを更新
@@ -293,8 +298,9 @@ function end_audio() {
 
         <!-- パネル表示 -->
         <div id="panel">
-            <div id="score">スコア：0</div>
             <div id="timer">残り時間：--</div>
+            <div id="score">スコア：0</div>
+            <div id="wrongScore">誤タイプ数：0</div>
             <div id="capslock">CapsLock --</div>
             <div id="subject">ロボ団 タイピングトレーニング</div>
             <div id="input">input</div>
